@@ -70,8 +70,11 @@ if (defined('MVERNUM') && !empty($m) && MVERNUM == MVINUM && !isset($_SESSION['i
 			<div id="content">
 				<ul id="steps">
 					<?php
+					if($curstep == 4) {
+						include('step'.$curstep.'.php');
+          }
 					include('proc'.$curstep.'.php');
-					
+
 					for ($i = 0; $i < count($steps); $i++) {
 						$step = $steps[$i];
 						$mod = 'next';
